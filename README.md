@@ -134,7 +134,7 @@ Place the images inside the `images/` directory.
 Start the game and make sure it is:
 
 - Running in **windowed mode**
-- Using a **fixed resolution**
+- Using a **fixed resolution 1200 x 800 (Can be set in steam launch options)**
 - Not moved after starting the bot
 
 Run the script:
