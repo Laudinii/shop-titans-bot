@@ -50,6 +50,9 @@ def sell_item(image_path, region=None, confidence=0.7):
         time.sleep(0.3)
     else:
         print("Can't sell, try to refuse")
+        time.sleep(0.3)
         if (find_and_click("images/sell-refuse.png", region, confidence)):
             print("Refused item")
             time.sleep(0.3)
+        else:
+            print("Couldn't find refuse button, might be a problem")
