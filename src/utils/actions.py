@@ -1,5 +1,4 @@
 import pyautogui
-import random
 import time
 
 def find_and_click(image_path, region=None, confidence=0.7):
@@ -10,9 +9,7 @@ def find_and_click(image_path, region=None, confidence=0.7):
 
         if location:
             center = pyautogui.center(location)
-            x = center.x + random.randint(-5, 5)
-            y = center.y + random.randint(-5, 5)
-            pyautogui.moveTo(x, y, duration=random.uniform(0.1, 0.25))
+            pyautogui.moveTo(center.x, center.y, duration=0.15)
             pyautogui.click()
             return True
 
@@ -24,7 +21,7 @@ def find_and_click(image_path, region=None, confidence=0.7):
 def collect_crafted_item(image_path, region=None, confidence=0.7):
     if (find_and_click(image_path, region, confidence)):
         print("Collected crafted item")
-        time.sleep(1)
+        time.sleep(0.2)
         print("Trying to confirm quality")
         if (find_and_click("images/collect-quality-confirm.png", region, 0.5)):
             print("Confirmed quality")

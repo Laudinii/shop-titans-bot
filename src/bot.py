@@ -1,4 +1,4 @@
-from utils import get_game_window, get_game_region, start_selling, start_collecting
+from utils import get_game_window, get_game_region, start_selling, start_collecting, try_unstuck
 import time
 
 def run_crafting_placeholder(region):
@@ -17,6 +17,8 @@ def main():
         start_selling(region)
         start_collecting(region)
         # run_crafting_placeholder(region)
+
+        try_unstuck(region)
 
         time.sleep(0.2)
 

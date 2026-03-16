@@ -11,4 +11,4 @@ def start_collecting(region):
     while (find_image(COLLECT_READY_IMG, region, 0.7)):
         if collect_crafted_item(COLLECT_READY_IMG, region, 0.7):
             print("Collect ready")
-            time.sleep(0.2)
+            time.sleep(0.05)
